@@ -1,5 +1,19 @@
+:root {
+  --secondaryColor: #f9f9f9;
+  --primaryClor: #333;
+  --dark-shadow: rgba(0, 0, 0, 0.219);
+  --white-shadow: rgba(255, 255, 255, 0.644);
+}
+
+.dark-theme {
+  --secondaryColor: #333;
+  --primaryClor: #f9f9f9;
+  --dark-shadow: rgba(255, 255, 255, 0.644);
+  --white-shadow: rgba(0, 0, 0, 0.219);
+}
+
 body {
-  background-color: #f9f9f9;
+  background-color: var(--secondaryColor);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   margin: 0;
@@ -9,12 +23,35 @@ body {
 html {
   font-size: 62.5%;
 }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+.icon-img {
+  width: 4rem;
+}
+.author {
+  font-size: 1.5rem;
+  color: var(--primaryClor);
+  font-weight: 200;
+}
+.somali {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 6rem;
+  color: var(--primaryClor);
+  font-weight: 400;
+}
 h1 {
   font-size: 3.6rem;
   font-weight: bold;
   text-align: center;
   margin-top: 4rem;
-  margin-bottom: 6rem;
+  color: var(--primaryClor);
 }
 
 form {
@@ -29,7 +66,7 @@ form {
   max-width: 40rem;
   padding: 1rem 2rem;
   border: none;
-  box-shadow: 0 0 0.5rem rgb(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5rem var(--dark-shadow);
   outline: none;
   border-radius: 0.5rem;
   font-size: 1.8rem;
@@ -42,7 +79,7 @@ form {
   color: #fff;
   border: none;
   font-size: 1.8rem;
-  box-shadow: 0 0 0.5rem rgb(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5rem var(--dark-shadow);
   cursor: pointer;
   border-radius: 0.5rem;
   transition: all 0.3s ease-in-out;
@@ -63,7 +100,7 @@ form {
   margin-bottom: 6rem;
   width: 30%;
   border-radius: 0.5rem;
-  box-shadow: 0 0 0.5rem rgb(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5rem var(--dark-shadow);
   overflow: hidden;
 }
 
@@ -80,7 +117,7 @@ form {
 .search-result a {
   padding: 1rem;
   display: block;
-  color: #333;
+  color: var(--primaryClor);
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;
 }

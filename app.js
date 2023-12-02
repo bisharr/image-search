@@ -49,3 +49,14 @@ formEl.addEventListener('submit', (event) => {
 showMoreButton.addEventListener('click', () => {
   searchImages();
 });
+
+const iconEl = document.querySelector('.icon-img');
+
+iconEl.addEventListener('click', function () {
+  document.body.classList.toggle('dark-theme');
+  if (document.body.classList.contains('dark-theme')) {
+    iconEl.src = 'sun.png';
+  } else {
+    iconEl.src = 'moon.png';
+  }
+});
