@@ -33,6 +33,7 @@ html {
 }
 .icon-img {
   width: 4rem;
+  cursor: pointer;
 }
 .author {
   font-size: 1.5rem;
